@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content
+  form(action='/new' method="post")
+    .form-group
+      label(for='name') Name
+      input#exampleInputEmail1.form-control(type='text' name="name" aria-describedby='name' placeholder='Enter your name')
+    .form-group
+      label(for='manufacturer') Maufacturer
+      input#exampleInputPassword1.form-control(type='text' name="manufacturer" aria-describedby='manufacturer' placeholder='Enter the manufacturer (1)')
+    .form-group
+      label(for='price') Price
+      input#exampleInputEmail1.form-control(type='text' name="price" aria-describedby='price' placeholder='Enter the price')
+    .form-group
+      label(for='stock') Stock
+      input#exampleInputEmail1.form-control(type='text' name="stock" aria-describedby='stock' placeholder='Enter the amount')
+    button.btn.btn-primary(type='submit') Submit

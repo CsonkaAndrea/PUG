@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+  .container-fluid
+    .row
+      each product in products
+        .col-xs-1.col-lg-4
+          .card.mx-auto
+            h5.card-header.bg-success #{product.name}
+            .card-body
+              h5.card-title Price: #{product.price}$
+              p.card-text Manufacturer: #{product.manufacturer} 
+              p.card-text On stock: #{product.stock}
+              a.btn.btn-warning(href=`/edit/${product.id}`) Edit
+              a.btn.btn-warning(href=`/products/delete/${product.id}`) Delete
